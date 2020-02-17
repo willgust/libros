@@ -5,7 +5,6 @@ import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
 
 import MainView from './views/MainView'
-// import DetailEventListView from './views/DetailEventListView'
 import LoginView from './views/LoginView'
 import SplashView from './views/SplashView'
 import IntroBooksView from './views/IntroBooksView';
@@ -23,11 +22,7 @@ const CoreNavigatior = createStackNavigator({
       header: null,
     },
   },
-  // DetailEventListView: {
-  //   screen: DetailEventListView, navigationOptions: {
-  //     header: null,
-  //   },
-  // },
+  
 })
 
 

@@ -21,38 +21,48 @@ class IntroBooksView extends Component {
             generes: [
                 {
                     isSelected: false,
-                    name: "Adolescentes",
+                    name: "Juveniles",
                     value: 0,
                 },
                 {
                     isSelected: false,
-                    name: "Arte y entretenimiento",
+                    name: "Arte",
                     value: 1,
                 },
                 {
                     isSelected: false,
-                    name: "Autoayuda",
+                    name: "Belicas",
                     value: 2,
                 },
                 {
                     isSelected: false,
-                    name: "Biografías y memorias",
+                    name: "Ciencía ficción y fantasía",
                     value: 3,
                 },
                 {
                     isSelected: false,
-                    name: "Ciencía ficción y fantasía",
+                    name: "Biografías",
                     value: 4,
                 },
                 {
                     isSelected: false,
-                    name: "Ciencía y Tecnología",
+                    name: "Informatica",
                     value: 5,
                 },
                 {
                     isSelected: false,
-                    name: "Ficción y literatura",
+                    name: "Fantasia",
                     value: 6,
+                },
+                {
+                    isSelected: false,
+                    name: "Eligue tu propia aventura",
+                    value: 7,
+                },
+                {
+                    isSelected: false,
+                    name: "Viajes",
+                    value: 8,
                 },
             ]
         }
@@ -172,20 +182,30 @@ class IntroBooksView extends Component {
         return (
             <View style={styles.temp}>
                 <TouchableHighlight style={styles.button} onPress={this.onPressAddBook} disabled={!this.canAdd()}>
-                    <Text style={styles.txtBtn}> + </Text>
+                    <Text style={styles.txtBtn}> Añadir </Text>
                 </TouchableHighlight >
                 <ScrollView style={styles.scroll}>
                     <View style={styles.container}>
-                        <Text style={styles.label}>Title</Text>
+                        <Text style={styles.label}>Titulo</Text>
                         <TextInput style={styles.input} onChangeText={this.onTitleChange}></TextInput>
 
                         <Text style={styles.label}>Autor</Text>
                         <TextInput style={styles.input} onChangeText={this.onAutorChange}></TextInput>
 
-                        <Text style={styles.label}>Details</Text>
+                        <Text style={styles.label}>Detalles</Text>
                         <TextInput style={styles.input} onChangeText={this.onDetailsChange}></TextInput>
 
-                        <Text style={styles.label} onPress={this.onClickGenere}>Genere</Text>
+                        <Text style={styles.labelGenSelected}>{this.generesSelected()}</Text>
+
+
+                        <Text style={styles.label}>Paginas</Text>
+                        <TextInput style={styles.input} onChangeText={this.onPagesChange}></TextInput>
+
+                        <Text style={styles.label}>Puntuation</Text>
+                        <TextInput style={styles.input} onChangeText={this.onSlideValueChange}></TextInput>
+
+                        
+                        <Text style={styles.label} onPress={this.onClickGenere}>Genero</Text>
 
                         <View style={styles.scrollCells}>
                             {listCategories.map(genere => {
@@ -193,14 +213,7 @@ class IntroBooksView extends Component {
                             })
                             }
                         </View>
-                        <Text style={styles.labelGenSelected}>{this.generesSelected()}</Text>
-
-
-                        <Text style={styles.label}>Pages</Text>
-                        <TextInput style={styles.input} onChangeText={this.onPagesChange}></TextInput>
-
-                        <Text style={styles.label}>Puntuation</Text>
-                        <Slider style={styles.slider} minimumValue={0} maximumValue={10} onValueChange={this.onSlideValueChange} onSlidingComplete={this.onSlidingComplete} value={puntuation}></Slider>
+                        
                     </View>
                 </ScrollView>
             </View >
@@ -216,10 +229,11 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: "#f0f0f0",
-        alignItems: 'center',
+        backgroundColor: "whait",
+        alignItems: 'left',
         justifyContent: 'center',
-        paddingBottom: 100
+        paddingBottom: 100,
+        borderRadius: 5,
     },
     scroll: {
         backgroundColor: "#f0f0f0",
@@ -247,10 +261,15 @@ const styles = StyleSheet.create({
         margin: 10
     },
     input: {
+        
         width: 300,
         height: 40,
-        borderColor: '#7a42f4',
-        borderWidth: 1
+        borderColor: 'black',
+        borderWidth: 1,
+        borderRadius: 5,
+        position: 'relative',
+        textAlign:"center"
+        
     },
     slider: {
         position: 'relative',
@@ -259,24 +278,18 @@ const styles = StyleSheet.create({
     },
     button: {
         position:"relative",
-        width: 40,
+        width: 370,
         height: 40,
-        left: "80%",
-        top: 40,
-        borderRadius: 25,
+        left: "5.5%",
+        top: 10,
         alignItems: 'center',
-        justifyContent: 'center',
+
         backgroundColor: '#FFFFFF',
-        shadowColor: 'rgba(0, 0, 0, 0.1)',
-        shadowOpacity: 0.8,
-        elevation: 4,
-        shadowRadius: 15,
-        shadowOffset: { width: 1, height: 6 },
-        marginBottom: 60
+
     },
     txtBtn: {
         fontWeight: "bold",
-        fontSize: 18
+        fontSize: 20
     },
     
 });
