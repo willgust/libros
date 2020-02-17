@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, View } from 'react-native';
-import BookCell from './BookCell';
+import LibrosCelda from './LibrosCelda';
 
 class BooksList extends Component{
 
@@ -13,7 +13,7 @@ class BooksList extends Component{
     return (
       <View>
         { books.map(book => {
-          return <BookCell book ={book} onFavorite={onFavorite} onDelete={onDelete}/>
+          return <LibrosCelda book ={book} onFavorite={onFavorite} onDelete={onDelete}/>
         })
         }
       </View>

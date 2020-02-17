@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 
-const BookCell = ({ book, onFavorite, onDelete }) => {
+const LibrosCelda = ({ book, onFavorite, onDelete }) => {
  console.log(book);
 //
   return (
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default BookCell;
+export default LibrosCelda;
