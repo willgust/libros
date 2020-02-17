@@ -23,21 +23,23 @@ const CategoryCell = ({ genere, onGenereSelected }) => {
 
 const styles = StyleSheet.create({
   container: {
-    borderRadius: 15,
-    width: "90%",
+    borderRadius: 5,
+    width: "60%",
     height: 80,
+    margin:10,
     backgroundColor: 'white',
-    borderColor: '#7a42f4',
+    borderColor: 'black',
     borderWidth: 1,
     marginTop: 5,
     marginLeft: "5%",
     marginRight: "5%",
-    justifyContent: 'center',
+    justifyContent: 'left',
     alignItems: "center",
     flexDirection: "row",
+    alignItems: "center",
   },
   left: {
-    width: "50%",
+    width: "70%",
     justifyContent: 'flex-start',
     alignItems: "center",
   },
@@ -47,8 +49,8 @@ const styles = StyleSheet.create({
   buton: {
     marginTop: 5,
     marginRight: 5,
-    borderRadius: 25,
-    borderColor: '#7a42f4',
+    borderRadius: 5,
+    borderColor: 'black',
     borderWidth: 1,
     paddingTop: 5,
     paddingBottom: 5,
@@ -62,19 +64,17 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 1, height: 13 },
   },
   butonFav: {
-    borderRadius: 25,
-    borderColor: '#7a42f4',
-    backgroundColor: '#7a42f4',
+    borderRadius: 5,
+    borderColor: 'black',
+    backgroundColor: 'black',
     borderWidth: 1,
-    paddingTop: 5,
-    paddingBottom: 5,
-    paddingLeft: 15,
-    paddingRight: 15,
-    shadowColor: 'rgba(0, 0, 0, 0.1)',
-    shadowOpacity: 0.8,
-    elevation: 6,
-    shadowRadius: 15,
-    shadowOffset: { width: 1, height: 13 },
+    paddingTop: 1,
+    paddingBottom: 12,
+    paddingLeft: 12,
+    paddingRight: 12,
+
+
+  
   },
   btnTx: {
 

@@ -5,7 +5,7 @@ import { StyleSheet, ScrollView, View, TextInput } from 'react-native';
 import Botbar from '../components/Botbar';
 import BooksList from '../components/BooksList';
 import BookService from '../core/BookService';
-import IntroBooksView from './IntroBooksView';
+import AddBooks from './AddBooks';
 
 class MainView extends Component {
 
@@ -130,7 +130,7 @@ class MainView extends Component {
         if (view == "ADD") {
             return (
                 <View style={styles.container}>
-                    <IntroBooksView onBookAdded={this.onBookAdded}></IntroBooksView>
+                    <AddBooks onBookAdded={this.onBookAdded}></AddBooks>
                     <Botbar setView={this.setView} currentView={view}></Botbar>
                 </View>)
         }

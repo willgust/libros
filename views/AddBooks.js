@@ -4,7 +4,7 @@ import CategoryCell from '../components/CategoryCell';
 import BookService from '../core/BookService';
 import { TouchableHighlight } from "react-native-gesture-handler";
 
-class IntroBooksView extends Component {
+class AddBooks extends Component {
 
     constructor(props) {
 
@@ -294,4 +294,4 @@ const styles = StyleSheet.create({
     
 });
 
-export default IntroBooksView;
+export default AddBooks;

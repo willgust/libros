@@ -7,7 +7,7 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import MainView from './views/MainView'
 import LoginView from './views/LoginView'
 import SplashView from './views/SplashView'
-import IntroBooksView from './views/IntroBooksView';
+import AddBooks from './views/AddBooks';
 
 console.disableYellowBox = true;
 
