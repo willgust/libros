@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
 
-const CategoryCell = ({ genere, onGenereSelected }) => {
+const AspectoCategorias = ({ genere, onGenereSelected }) => {
 
   return (
     <View style={styles.container}>
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CategoryCell;
+export default AspectoCategorias;

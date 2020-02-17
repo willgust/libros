@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, Button, Text, TextInput, View, Slider, ScrollView } from 'react-native';
-import CategoryCell from '../components/CategoryCell';
+import AspectoCategorias from '../components/AspectoCategorias';
 import BookService from '../core/BookService';
 import { TouchableHighlight } from "react-native-gesture-handler";
 
@@ -209,7 +209,7 @@ class AddBooks extends Component {
 
                         <View style={styles.scrollCells}>
                             {listCategories.map(genere => {
-                                return <CategoryCell genere={genere} onGenereSelected={this.onGenereSelected} key={genere.value} ></CategoryCell>
+                                return <AspectoCategorias genere={genere} onGenereSelected={this.onGenereSelected} key={genere.value} ></AspectoCategorias>
                             })
                             }
                         </View>
