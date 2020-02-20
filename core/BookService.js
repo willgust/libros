@@ -7,10 +7,16 @@ class BookService {
     constructor() {
         books = [];
 
-        books.push(new BookModel("title", "autor", "details", "genere", 10,
+        books.push(new BookModel("El Señor de los anillos", "Tolkien", "Historia de aventuras", "Fantasia", 3000,
             10));
 
-            books.push(new BookModel("asdf", "autor", "details", "genere", 10,
+            books.push(new BookModel("Harry Poter", "J.K Roulin", "Historia de un mago", "Juveniles", 600,
+            10));
+
+            books.push(new BookModel("Nacidos de la bruma", "Brandon Sanderson", "resumen de algo", "Juveniles", 400,
+            10));
+
+            books.push(new BookModel("Juego de tronos", "Martins", "historia sin final", "Fantasia", 700,
             10));
     }
 

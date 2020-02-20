@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
         top: 10,
         alignItems: 'center',
 
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#493A57',
 
     },
     txtBtn: {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View, Image, ActivityIndicator } from 'react-native';
 
+//barra inferior
 const Botbar = ({ setView, currentView }) => {
   return (
     <View style={styles.container}>
@@ -30,6 +31,15 @@ const Botbar = ({ setView, currentView }) => {
             PlaceholderContent={<ActivityIndicator />}
           />
         </TouchableHighlight>
+        <TouchableHighlight style={currentView == "STATISTICS" ? styles.butonSel : styles.buton}>
+          {/* <Text style={styles.tx}> AddBooks</Text> */}
+          <Image
+            style={styles.img}
+            source={require('../assets/detaills.png')}
+            PlaceholderContent={<ActivityIndicator />}
+          />
+        </TouchableHighlight>
+        
       </View>
 
     </View>
@@ -39,8 +49,8 @@ const Botbar = ({ setView, currentView }) => {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    height: 60,
-    backgroundColor: 'powderblue',
+    height: 80,
+    backgroundColor: '#493A57',
     alignItems: 'center',
     justifyContent: 'center',
     position: "absolute",
@@ -48,7 +58,7 @@ const styles = StyleSheet.create({
     bottom: 0
   },
   img: {
-    marginTop: 10,
+    marginTop: 5,
     width: 50, 
     height: 50,
   },
@@ -60,13 +70,13 @@ const styles = StyleSheet.create({
   },
   buton: {
     height: "100%",
-    width: "33%",
+    width: "23%",
     justifyContent: 'center',
     alignItems: 'center',
   },
   butonSel: {
     height: "100%",
-    width: "33%",
+    width: "30%",
     borderTopColor: 'black',
     borderTopWidth: 2,
     justifyContent: 'center',

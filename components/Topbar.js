@@ -12,7 +12,7 @@ const Topbar = ({orderAlpha, orderCash }) =>{
           <TouchableHighlight onPress={()=>orderAlpha()} style={styles.buton} >
               <Text style={styles.tx}> A⬇️ </Text>
           </TouchableHighlight >
-          <Text  style={styles.appTx}>PlaceMyBet</Text>
+          <Text  style={styles.appTx}>Libros</Text>
           <TouchableHighlight onPress={()=>orderCash()}  style={styles.buton}>
               <Text style={styles.tx}> $⬆️</Text>
           </TouchableHighlight>

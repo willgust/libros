@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { StyleSheet, View } from 'react-native';
 import LibrosCelda from './LibrosCelda';
 
+//lista de libros
 class BooksList extends Component{
 
   constructor(props){

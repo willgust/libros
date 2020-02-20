@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 
-
+//estilos del los generos del libro
 const AspectoCategorias = ({ genere, onGenereSelected }) => {
 
   return (

@@ -94,6 +94,7 @@ class MainView extends Component {
         this.bookService.GetMyBooks(this.onGetBooksSucces);
     }
 
+    //funcion de busqueda
     onFilterChange(val) {
         if (val == "") {
             this.getBooks();
@@ -158,23 +159,26 @@ class MainView extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: "#f0f0f0",
-        backgroundColor: "red",
+
+        backgroundColor: "#3A5752",
         alignItems: 'center',
         justifyContent: 'center',
+        
     },
     scroll: {
         width: "100%",
         flexDirection: "column",
         flex: 1,
-        marginTop: 5
+        marginTop: 15,
+        
     },
     input: {
         width: 300,
         height: 40,
-        borderRadius: 25,
-        borderColor: '#7a42f4',
-        borderWidth: 1
+        borderRadius: 5,
+        borderColor: 'gray',
+        borderWidth: 1,
+        marginTop: 30
     },
 });
 

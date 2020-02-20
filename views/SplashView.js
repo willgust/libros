@@ -20,32 +20,6 @@ class SplashView extends Component {
 
     onTryLogin = async () => {
 
-        // try {
-        //     let userLogged = await AsyncStorage.getItem(this.storageManager.UserLoggedKey());
-        //     if (userLogged == null || userLogged == undefined) {
-        //         this.props.navigation.navigate('Login');
-        //         console.log("--------> No hay usuario");
-
-        //     }
-        //     else {
-        //         console.log("--------> Hay usuario");
-        //         userLogged = JSON.parse(userLogged);
-
-        //         console.log(userLogged.id);
-        //         this.apiManager.Login(userLogged.userName, userLogged.userPassword,
-        //             (token, userLogged) => {
-        //                 console.log("--------> Logeado");
-        //                 this.props.navigation.navigate('App');
-        //             },
-        //             () => {
-        //                 console.log("--------> No Logeado");                        
-        //                 this.props.navigation.navigate('Login');
-        //             });
-        //     }
-
-        // } catch (e) {
-        //     console.log(e);
-        // }
 
         this.props.navigation.navigate('Main');
     }
