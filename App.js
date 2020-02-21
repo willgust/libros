@@ -8,6 +8,7 @@ import MainView from './views/MainView'
 import LoginView from './views/LoginView'
 import SplashView from './views/SplashView'
 import AddBooks from './views/AddBooks';
+import DetailView from './views/DetailView'
 
 console.disableYellowBox = true;
 
@@ -22,7 +23,11 @@ const CoreNavigatior = createStackNavigator({
       header: null,
     },
   },
-  
+  DetailBookView: {
+    screen: DetailView, navigationOptions: {
+      header: null,
+    },
+  },
 })
 
 

@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
-const LibrosCelda = ({ book, onFavorite, onDelete }) => {
+const LibrosCelda = ({ book, onFavorite, onDelete, onDetail }) => {
  console.log(book);
 //
   return (
-    <View style={styles.contenedor} >
+    <View style={styles.contenedor} onPress={() => { onDetail(book) }} >
       <View style={styles.uno}>
         <Text style={styles.color}>Titulo: {book.getTitle()} </Text>
         <Text style={styles.color}>Autor: {book.getAutor()}</Text>
       </View>
       <View>
-        <TouchableHighlight onPress={() => { onDelete(book);}}>
+        <TouchableHighlight underlayColor={'transparent'} onPress={() => { onDelete(book);}}>
           <Text style={styles.boton}> Borrar</Text>
         </TouchableHighlight >
-        <TouchableHighlight style={book.getFavourite() ? styles.botonFav : styles.boton} onPress={() => {
+        <TouchableHighlight underlayColor={'transparent'} style={book.getFavourite() ? styles.botonFav : styles.boton} onPress={() => {
           console.log(book);
           onFavorite(book);
         }}>
           <Text style={styles.btnTx}> Favorito</Text>
+        </TouchableHighlight >
+        <TouchableHighlight underlayColor={'transparent'} onPress={() => { onDetail(book);}}>
+          <Text style={styles.boton}> Detalles</Text>
         </TouchableHighlight >
       </View>
     </View>
@@ -39,15 +43,15 @@ const styles = StyleSheet.create({
     flexDirection: "row-reverse",
   },
   uno: {
-    width: "60%",
+    width: "65%",
     justifyContent: 'flex-start',
     alignItems: "center",
   },
   
   boton: {
-    marginTop:5,
+    marginTop:3,
     borderRadius: 5,
-    paddingTop: 5,
+    paddingTop: 4,
     paddingBottom: 5,
     paddingLeft: 20,
     paddingRight: 20,

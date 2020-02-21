@@ -10,11 +10,11 @@ class BooksList extends Component{
   }
 
   render(){
-    const {books, onFavorite,onDelete} = this.props
+    const {books, onFavorite,onDelete,onDetail} = this.props
     return (
       <View>
         { books.map(book => {
-          return <LibrosCelda book ={book} onFavorite={onFavorite} onDelete={onDelete}/>
+          return <LibrosCelda book ={book} onFavorite={onFavorite} onDelete={onDelete} onDetail={onDetail}/>
         })
         }
       </View>

@@ -13,11 +13,9 @@ class BookService {
             books.push(new BookModel("Harry Poter", "J.K Roulin", "Historia de un mago", "Juveniles", 600,
             10));
 
-            books.push(new BookModel("Nacidos de la bruma", "Brandon Sanderson", "resumen de algo", "Juveniles", 400,
+            books.push(new BookModel("Nacidos de la bruma", "Brandon Sanderson", "resumen de algo", "Juveniles", "400",
             10));
 
-            books.push(new BookModel("Juego de tronos", "Martins", "historia sin final", "Fantasia", 700,
-            10));
     }
 
     AddBook(title, autor, details, genere, pages,

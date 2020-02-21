@@ -26,6 +26,8 @@ class MainView extends Component {
         this.onBookAdded = this.onBookAdded.bind(this)
         this.onFilterChange = this.onFilterChange.bind(this)
         this.getBooks = this.getBooks.bind(this)
+        this.onDetailBook = this.onDetailBook.bind(this)
+        
 
         this.navigation = null;
         this.bookService = new BookService;
@@ -59,6 +61,15 @@ class MainView extends Component {
     onDeleteBook(book) {
         this.bookService.DeleteBook(book);
         this.getBooks();
+    }
+
+    //detalles
+    onDetailBook(book) {
+        console.log("ondetail");
+        console.log(book);
+        const { navigate } = this.props.navigation;
+
+        navigate("DetailBookView", { book: JSON.stringify(book) });
     }
 
     onOrderAlpha() {
@@ -147,7 +158,7 @@ class MainView extends Component {
                         <TextInput style={styles.input} onChangeText={this.onFilterChange}></TextInput>
                     </View>
                     <ScrollView style={styles.scroll}>
-                        <BooksList books={filteredBooks} onFavorite={this.onFavoriteBook} onDelete={this.onDeleteBook} ></BooksList>
+                        <BooksList books={filteredBooks} onFavorite={this.onFavoriteBook} onDelete={this.onDeleteBook} onDetail={this.onDetailBook} ></BooksList>
                     </ScrollView>
                     <Botbar setView={this.setView} currentView={view}></Botbar>
                 </View>
